@@ -1,5 +1,49 @@
-Key leaning points:
-  1. Database is a collecion of information/data.
-  2.SQL and NO SQL
-  3. Use database to store and retrieve data for your websites.
+===============
+# Introduction:
+  1. A database is a collecion of information/data and has an interface to manipulate the data.
+  2. SQL(relational) and NO SQL(non-relational)
+  3. Use databases to store and retrieve data for your websites.
+===============
+# MEAN:
+  The components of the MEAN stack are as follows:
+  MongoDB, a NoSQL database
+  Express.js, a web application framework that runs on Node.js
+  Angular.js or Angular, JavaScript MVC frameworks that run in browser JavaScript engines
+  Node.js, an execution environment for event-driven server-side and networking applications
+===============
+# To fix the problem when mongodb is not closed correclty.
+  Run the following to fix the db:
+  killall mongod ; cd ; ./mongod --repair ; cd data ; rm -rf mongod.lock ; cd ; ./mongod 
+===============
+# Mongo Shell basics:
+  * ./mongod: use this command to connect to the database
+  * Go to mongodb shell and show basic information of the database: $mongo
+  * Then you can use mongo commands:
+    *show dbs
+    *use name_of_DB
+      *after switch to one DB, you can insert instance to a database
+          *db.dogs.insert() //db means the the database you are on,dogs is a collection,()contains the object we want to insert.
+            *e.g., db.dogs.insert({name:"rusty",breed:"mutt"})
+          *show collections //show the newly added dogs collection
+          *db.dogs.find() //return all the dogs if you leave () empty.
+          *db.dogs.find({name:"rusty"})// find dogs with the name of rusty.
+          *db.dogs.update({name:"rusty"},{breed:"Asian"}) //this will overwrite rusty's all info with just the breed;
+          *db.dogs.update({name:"rusty"},{$set:{iscute:true}})//this will keep rusty's present features and add the new features.
+          *db.dogs.remove({name:"rusty"})//remove the related instances
+===============
+# Mongoose:         
+    *Help to interact with the database in the javascript, although it is not necessary.
+    *npm install mongoose. Then require it in the app.js with the command var mongoose = require("mongoose");
+    *mongoose.connect("mongodb://localhost/dog_app") //Tell mongoose to connect to the server. dog_app the name the database. if you don't have the database, it will create that database for you.
+    *var dogSchema = new mongoose.Schema({name:String, age:Number, breed:String});//build the schema
+    *var Dog = mongoose.model("Dog",dogSchema); // "Dog" is the singular version of the model. Dog with the capital D is conventisonal.
+    *db.dogs // this collection 'dogs' will automatically made by the above line of command.
+    *//adding a new dog to the DB as dog. Here the var Gorge is just a variable.
+      *1. var Gorge = new Dog({name:"rusty",breed:"Asian"});
+      *2. Gorge.save(function(err,dog){if(err){console.log(err)}else{console.log(dog);}});  //Here, the 'dog' Gorge found in the database will be returned in the else function.
+      * //create and save by using one command:
+        *Dog.create({name:"rusty",breed:"Asian"},function(err,dog){if(err){console.log(err)}else{console.log(dog);}});
+        //the variable 'dog'or 'dogs' in the function of the above command doesn't matter only if make sense to you.
+      *Dog.find({},function(err,dogs){if(err){console.log(err)}else{console.log(dogs);}});
+
 
