@@ -45,5 +45,6 @@
         *Dog.create({name:"rusty",breed:"Asian"},function(err,dog){if(err){console.log(err)}else{console.log(dog);}});
         //the variable 'dog'or 'dogs' in the function of the above command doesn't matter only if make sense to you.
       *Dog.find({},function(err,dogs){if(err){console.log(err)}else{console.log(dogs);}});
-
+==============
+# CRUD: create,read,update,destroy
 
