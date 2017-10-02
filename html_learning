@@ -1,0 +1,10 @@
+============
+The difference between src and href:
+  e.g., <img src='  '>, <link rel='stylesheet' type='text/css' href=''>
+  There is a differentiation between src and href and they can't be used interchangeably. 
+  We use src for replaced elements while href for establishing a relationship between the referencing document and an external resource.
+  rel: is short for relation. It specifies the relation between the tag and href.
+  type:The common use of this attribute is to define the type of style sheet linked and the most common current value is text/css, which indicates a Cascading Style Sheet format.
+============
+
+  
