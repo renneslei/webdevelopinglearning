@@ -11,7 +11,7 @@
   Angular.js or Angular, JavaScript MVC frameworks that run in browser JavaScript engines
   Node.js, an execution environment for event-driven server-side and networking applications
 ===============
-# To fix the problem when mongodb is not closed correclty.
+# To fix the problem when mongodb is not closed correctly.
   Run the following to fix the db:
   killall mongod ; cd ; ./mongod --repair ; cd data ; rm -rf mongod.lock ; cd ; ./mongod 
 ===============
