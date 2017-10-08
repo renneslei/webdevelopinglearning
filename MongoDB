@@ -30,7 +30,7 @@
           *db.dogs.update({name:"rusty"},{breed:"Asian"}) //this will overwrite rusty's all info with just the breed;
           *db.dogs.update({name:"rusty"},{$set:{iscute:true}})//this will keep rusty's present features and add the new features.
           *db.dogs.remove({name:"rusty"})//remove the related instances
-          *db.dogs.drop() //drop all data in that database
+          *db.dogs.drop() //drop all data in that collection of the database
 ===============
 # Mongoose:         
     *Help to interact with the database in the javascript, although it is not necessary.
