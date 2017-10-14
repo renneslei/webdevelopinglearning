@@ -48,6 +48,7 @@
       *Dog.find({},function(err,dogs){if(err){console.log(err)}else{console.log(dogs);}});
       *Dog.findByIdAndRemove();
       *Dog.findByIdAndUpdate();
+      *Dog.findById();
       
 ==============
 # CRUD: create,read,update,destroy
