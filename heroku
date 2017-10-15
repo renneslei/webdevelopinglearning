@@ -1,0 +1,6 @@
+=========================
+How to deploy your code:
+git status
+git add filename
+git commit -m "comment for the change"
+git push heroku master
