@@ -1,10 +1,79 @@
 ============
-The difference between src and href:
-  e.g., <img src='  '>, <link rel='stylesheet' type='text/css' href=''>
-  There is a differentiation between src and href and they can't be used interchangeably. 
-  We use src for replaced elements while href for establishing a relationship between the referencing document and an external resource.
-  rel: is short for relation. It specifies the relation between the tag and href.
-  type:The common use of this attribute is to define the type of style sheet linked and the most common current value is text/css, which indicates a Cascading Style Sheet format.
+Elements:
+  <ul></ul>
+  <ol></ol>
+  <em></em>
+  <hr>
+  <u></u>
+  <div></div>:block element, generic container, use it to group content 
+  <span></span>:inline element, generic container, use it to group content
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <img src="">
+  <a href="www.google.com">Link Text</a>
+
 ============
+Attributes:
+  The difference between src and href:
+    e.g., <img src='  '>, <link rel='stylesheet' type='text/css' href=''>
+    There is a differentiation between src and href and they can't be used interchangeably. 
+    We use src for replaced elements while href for establishing a relationship between the referencing document and an external resource.
+    rel: is short for relation. It specifies the relation between the tag and href.
+    type:The common use of this attribute is to define the type of style sheet linked and the most common current value is text/css, which indicates a Cascading Style Sheet format.
+
+============
+Table:
+<table border="1">
+  <thead>
+    <tr>
+      <th></th> *for table head names
+      <th></th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+=============
+Form: Create and send data from the form to some places; (http method) get or add data to the database 
+  <form action="/where to send the data" method="get/post">
+    <input type="email/text/password/..." placeholder="some text">
+    <button>LogIn</button>  ===== or <input type="submit">
+    <textarea name="" rows="" cols=""></textarea>
+  </form>
+  
+    Form Validation: add 'required' in the input tag.
+    ==============  
+    Two ways to Label: 
+      **use name attribute to give radio button the name petChoice, you can let the user just choose one of the choice. 
+      **Use value attribute, you can send the value for each choice, which will reflect in the routes when you submit the form.
+    1.
+       <lable for="username">UserName:</label> 
+       <input name="petChoice" id="username" type="email/text/password/..." placeholder="some text" value="Dog">
+
+    2.
+       <lable>UserName: 
+          <input name="petChoice" type="email/text/password/..." placeholder="some text" value="Cat">
+       </label>
+    =============
+    Radio button
+    <input type="checkbox">
+    <input type="radio">
+
+    Dropdown Menu:
+    <select name="color">  **You need the name attribute (like input of form) to send the info to the routes.
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+    </select>
+
+
+
 
   
+  
+
+
